@@ -1,0 +1,720 @@
+/* General Body */
+.body {
+    background-color: #000b12;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: openAnimation 0.5s;
+    overflow-x: hidden; /* Prevent horizontal scrolling globally */
+}
+
+/* Header Section */
+
+.pop-down-header {
+    display: none;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%; /* Ensure header spans the full width of the viewport */
+    max-width: 100%; /* Prevent exceeding the viewport width */
+    top: 0;
+    background-color: #000b12;
+    z-index: 1000;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Include padding and border in the width calculation */
+    padding: 10px 20px; /* Add padding for spacing */
+}
+
+.header-img {
+    width:25%;
+}
+
+.header-details {
+    font-size: 18px;
+    color: lightskyblue;
+    transition: color 0.3s ease;
+    margin-left: 0%;
+}
+
+.header-details:hover {
+    color: dodgerblue;
+}
+
+/* Intro Section */
+.bio-intro {
+    font-size: 32px;
+    font-weight: bold;
+    color: dodgerblue;
+    margin-top: 15%;
+    text-align: start;
+    margin-left: 12%;
+}
+
+.bio-desc {
+    flex: 1; 
+    font-size: 1.2rem; 
+    line-height: 1.6; 
+    text-align: justify; 
+    max-width: 60%;
+    margin-left: 5%;
+    text-align: center;
+}
+
+.social-icons {
+    margin-left: 20%;
+}
+
+.social-icons img {
+    width: 30px;
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons img:hover {
+    transform: rotate(360deg) scale(1.2);
+    filter: brightness(1.2);
+}
+
+
+@keyframes openAnimation {
+    0% {
+      opacity: 0;
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  /* Profile photo styling with animation */
+  .profile-photo {
+    width: 16%;
+    height: 30%;
+    border-radius: 48%;
+    margin-left: 10%;
+    margin-top: 12%;
+    margin-right: 8%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: openAnimation 1s ease-in-out;
+  }
+
+  /* General body styling */
+/* Add dark mode styles for other elements if needed */
+
+.toggle-btn {
+    background-color: dodgerblue;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-left:21.5%; margin-top: 1%;
+}
+
+.toggle-btn:hover {
+    background-color: royalblue;
+}
+
+/* Light Mode */
+.light-mode {
+    background-color:lightblue;
+    color: #000b12;
+}
+
+.light-mode .header {
+    background-color: #000b12;
+}
+
+.light-mode .header-details {
+    color: #ffffff;
+}
+
+.light-mode .header-details:hover {
+    color: royalblue;
+}
+
+.light-mode .bio-intro {
+    color: #000b12;
+}
+
+.light-mode .bio-desc {
+    color: #000b12;
+}
+
+.light-mode .heading {
+    color: #ffffff;
+}
+
+.light-mode .toggle-btn {
+    background-color: #000b12;
+}
+
+.light-mode .skills-section {
+    background-color: #e9ecef;
+}
+
+.light-mode .skills-list li {
+    background-color: white;
+    color: #000b12;
+}
+
+.light-mode .resume-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.light-mode .footer {
+    background-color: #000;
+}
+
+.light-mode .write {
+    color: #000b12;
+}
+
+.light-mode .contact-item a {
+    color: #000b12;
+}
+
+.light-mode .contact-item p {
+    color: #000b12;
+}
+
+.light-mode .footer {
+    background-color: lightblue;
+    color: #000;
+    font-weight: bolder;
+}
+/* Skills Section */
+.section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #121212;
+    border-radius: 10px;
+}
+
+.heading {
+    font-size: 28px;
+    color: dodgerblue;
+    margin-bottom: 20px;
+    font-weight: bolder;
+}
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 20px;
+    background-color:#555555; /* Adjust as per your theme */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0; /* Start hidden for animation */
+    transform: scale(0.9); /* Start with a smaller scale */
+    animation: zoomIn 1.2s ease-out forwards; /* Zoom-in effect */
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    animation: fadeInTop 1.5s ease-out; /* Fade-in from the top */
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+.skills-list li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    background:#e0f7fa;
+    border-radius: 6px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s ease; /* Transition on hover */
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(30px); /* Initial position */
+    animation: bounceIn 1s ease-out forwards;
+    animation-delay: calc(0.2s * var(--i)); /* Staggered effect */
+}
+
+/* Hover Effects */
+.skills-list li:hover {
+    background-color:lightblue; /* Highlight on hover */
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.skills-list strong {
+    font-weight: bold;
+    color: #000;
+}
+
+/* Keyframe Animations */
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInTop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50% {
+        opacity: 0.8;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Projects Section */
+.project-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.project-div {
+    width: 30%;
+    background-color:lightslategrey;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.project-div:hover {
+    transform: scale(1.05);
+    background-color:#e0f7fa;
+}
+
+.project-title {
+    font-size: 22px;
+    text-align: center;
+    color:#000b12;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.project-banner {
+    justify-items: center;
+    align-self: center;
+    align-content: center;
+    max-width: 100%; /* Ensure the image fits inside the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Add space below the image */
+    margin-left: 20%;
+}
+
+.project-desc {
+    text-align: center;
+    font-size: 16px;
+    color:#000b12;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #000b12;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+/* Achievements & Certificates Section */
+.achievement-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.certificate-div {
+    width: 45%;
+    background-color:#333333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.certificate-div:hover {
+    transform: scale(1.05);
+    background-color:#32465f;
+}
+
+.certificate-img {
+    width: 30%;
+    height: auto;
+    margin-right: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.certificate-img:hover {
+    transform: scale(1.1);
+}
+
+.certificate-title {
+    font-size: 20px;
+    color: dodgerblue;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.certificate-desc {
+    font-size: 16px;
+    color: #dddddd;
+    margin-bottom: 5px;
+}
+
+/* Resume Section */
+.resume-container {
+    text-align: center;
+    padding: 20px;
+    background-color:#000b12;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.resume-container:hover {
+    transform: scale(1.05);
+    background-color: #333333;
+}
+
+.resume-desc {
+    font-size: 18px;
+    color: #dddddd;
+    margin-bottom: 20px;
+}
+
+.resume-btn {
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: dodgerblue;
+    color: #ffffff;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.resume-btn:hover {
+    background-color: royalblue;
+    transform: scale(1.1);
+}
+.contact-section {
+    text-align: center;
+    color: deepskyblue;
+    padding: 20px;
+    background-color: #1a1a1a; /* Dark background to match theme */
+    border-radius: 10px; /* Optional rounded edges */
+  }
+
+  .contact-details {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 15px;
+  }
+
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: medium;
+  }
+
+  .hover-link {
+    text-decoration: none;
+    color: deepskyblue;
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+  }
+
+  .hover-link:hover {
+    text-decoration: underline;
+    color: dodgerblue; /* Slight color change on hover */
+  }
+
+  .contact-item i {
+    font-size: 1.2em;
+    color: deepskyblue;
+  }
+
+  .hover-link:hover {
+    height: min-content; /* Ensures hover state retains alignment */
+  }
+
+  .write {
+    font-size: large; color:azure; margin-left: 20%; margin-top: 10%;
+  }
+
+  /* Default styles are for desktop. Add responsive styles below */
+/* Responsive Styles */
+@media only screen and (max-width: 1200px) {
+    body {
+        overflow-x: hidden; 
+        align-items: center;
+    }
+
+    .header-img {
+        width: 30%;
+    }
+
+    .bio-intro {
+        margin-top: 20%;
+    }
+
+    .bio-desc {
+        max-width: 80%;
+        font-size: 1rem;
+        margin-left: 3%;
+    }
+
+    .profile-photo {
+        width: 20%;
+        height: auto;
+        margin-left: 5%;
+    }
+
+    .social-icons {
+        margin-left: 30%;
+    }
+
+    .toggle-btn {
+        margin-left: 31.5%;
+    }
+
+    .skills-section {
+        padding: 15px;
+    }
+
+    .skills-list li {
+        font-size: 14px;
+    }
+
+    .project-div {
+        width: 45%;
+    }
+
+    .project-banner {
+        margin-left: 15%;
+    }
+
+    .certificate-div {
+        width: 100%;
+    }
+
+    .resume-container {
+        width: 90%;
+    }
+
+    .contact-section {
+        padding: 15px;
+    }
+
+    .contact-details {
+        gap: 20px;
+        flex-direction: column;
+    }
+
+    .contact-item {
+        align-self: center;
+    }
+
+    .write {
+        text-align: center;
+        margin-left: 0%;
+        font-weight: bolder;
+    }
+}
+
+/* Mobile-Friendly CSS Adjustments */
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        height: 10%;
+    }
+
+    .header-img {
+        width: 60%;
+        margin-bottom: 10px;
+    }
+
+    .header-details {
+        font-size: 16px;
+    }
+
+    .bio-intro {
+        font-size: 22px;
+        text-align: center;
+        margin: 45% 0 5% 0;
+    }
+
+    .bio-desc {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .profile-photo {
+        width: 35%;
+        margin: 25% 5% 0% 5%
+    }
+
+    .social-icons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-left: 0%;
+        margin-top: 3%;
+    }
+
+    .toggle-btn {
+        display: block;
+        margin: 15px auto;
+        padding: 10px 15px;
+        font-size: 14px;
+        margin-left: 29%;
+    }
+
+    .skills-section {
+        padding: 10px;
+    }
+
+    .skills-list li {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .project-div {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .project-banner {
+        margin-left: 0%;
+    }
+
+    .certificate-div {
+        width: 90%;
+        margin: 10px auto;
+    }
+
+    .resume-container {
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .contact-section {
+        padding: 10px;
+    }
+
+    .contact-details {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .write {
+        font-size: medium;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .header-img {
+        width: 70%;
+    }
+
+    .header-details {
+        font-size: 14px;
+    }
+
+    .bio-intro {
+        font-size: 20px;
+        margin: 70% 5% 5% 0%;
+    }
+
+    .bio-desc {
+        font-size: 0.9rem;
+        max-width: 95%;
+        margin-left: 8%;
+        margin-bottom: 5%;
+    }
+
+    .profile-photo {
+        width: 40%;
+        height: 90%;
+        margin-top: 40%;
+    }
+
+    .toggle-btn {
+        padding: 8px 10px;
+        font-size: 14px;
+        margin-left: 22%;
+    }
+
+    .skills-list li {
+        font-size: 12px;
+    }
+
+    .project-div {
+        width: 95%;
+    }
+
+    .certificate-div {
+        width: 95%;
+    }
+
+    .resume-container {
+        width: 90%;
+    }
+}
