@@ -7,6 +7,7 @@
     padding: 0;
     animation: openAnimation 0.5s;
     overflow-x: hidden; /* Prevent horizontal scrolling globally */
+    justify-content: center;
 }
 
 /* Header Section */
@@ -21,7 +22,7 @@
     align-items: center;
     position: fixed;
     width: 100%; /* Ensure header spans the full width of the viewport */
-   /* Prevent exceeding the viewport width */
+    /* Prevent exceeding the viewport width */
     top: 0;
     background-color: #000b12;
     z-index: 1000;
@@ -595,7 +596,7 @@
     .bio-intro {
         font-size: 22px;
         text-align: center;
-        margin: 45% 0 5% 0;
+        margin: 90% 0 5% 0;
     }
 
     .bio-desc {
@@ -620,10 +621,10 @@
 
     .toggle-btn {
         display: block;
-        margin: 15px auto;
+        margin-top: 15px;
         padding: 10px 15px;
         font-size: 14px;
-        margin-left: 29%;
+        margin-left: 2%;
     }
 
     .skills-section {
@@ -670,8 +671,12 @@
 }
 
 @media only screen and (max-width: 480px) {
+    .header {
+        height: 0px;
+    }
+
     .header-img {
-        width: 70%;
+        width: 50%;
     }
 
     .header-details {
@@ -680,7 +685,7 @@
 
     .bio-intro {
         font-size: 20px;
-        margin: 70% 5% 5% 0%;
+        margin: 100% 5% 5% 0%;
     }
 
     .bio-desc {
@@ -718,3 +723,5 @@
         width: 90%;
     }
 }
+
+/* General Mobile Styles */
