@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <title>Kritika Magnani</title>
+</head>
+<body class="body">
+    <div class="header pop-down-header" data-aos="fade-down">
+        <img class="header-img" src="./images/kritika.png" alt="logo.png" />
+        <a href="#skills" class="detail-area">
+            <p class="header-details">Skills</p>
+        </a>
+        <a href="#project" class="detail-area">
+            <p class="header-details">Projects</p>
+        </a>
+        <a href="#ac" class="detail-area">
+            <p class="header-details">Achievements & Certificates</p>
+        </a>
+        <a href="#resume" class="detail-area">
+            <p class="header-details">Resume</p>
+        </a>
+        <a href="#contact" class="detail-area">
+            <p class="header-details">Contact</p>
+        </a>
+    </div>
+
+    <div style="display: flex; flex-direction: row;">
+        <div class="intro" style="margin-top: 12%;">
+          <p class="bio-intro">Hello Everyone, I'm Kritika!</p>
+          <p class="bio-desc">
+            I am a sophomore Data Science student at Manipal University Jaipur, 
+            passionate about blending creativity with technology. 
+            My interests span web development, data analysis, machine learning, and working on 
+            projects that drive real-world impact. Whether it’s designing responsive websites, 
+            analyzing complex datasets, or exploring cutting-edge technologies, 
+            I am always eager to learn, create, and grow.
+          </p>
+          <div class="social-icons">
+            <a href="https://github.com/kritika0818">
+              <img class="accounts-img" src="./images/github.png" alt="GitHub">
+            </a>
+            <a href="https://www.instagram.com/_.k4595._/">
+              <img class="accounts-img" src="./images/instagram (1).png" alt="Instagram">
+            </a>
+            <a href="https://www.linkedin.com/in/kritika-magnani-7473022b2/">
+              <img class="accounts-img" src="./images/linkedin.png" alt="LinkedIn">
+            </a>
+          </div>
+          <button id="darkModeToggle"class="toggle-btn">Switch to light mode</button>
+        </div>
+          <img src="./images/photo.jpeg" alt="Kritika's Profile Photo" class="profile-photo">
+      </div>
+      <script>
+        // Select the toggle button
+        const toggleButton = document.getElementById("darkModeToggle");
+
+        // Check if the user has a saved theme preference
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            document.body.classList.add(savedTheme);
+            toggleButton.textContent = savedTheme === "light-mode" ? "Switch to Dark Mode" : "Switch to Light Mode";
+        }
+
+        // Add an event listener to toggle between light and dark modes
+        toggleButton.addEventListener("click", () => {
+            const isDarkMode = document.body.classList.toggle("dark-mode");
+            const isLightMode = document.body.classList.toggle("light-mode");
+
+            // Update button text
+            toggleButton.textContent = isLightMode ? "Switch to Dark Mode" : "Switch to Light Mode";
+
+            // Save the user's preference in localStorage
+            localStorage.setItem("theme", isLightMode ? "light-mode" : "dark-mode");
+        });
+    </script>
+
+    <div id="skills" class="section" data-aos="fade-right">
+        <p class="heading">Skills</p>
+        <section id="skills" class="skills-section">
+            <ul class="skills-list">
+                <li style="--i: 1;"><strong>Programming Languages:</strong> Python, C, JavaScript</li>
+                <li style="--i: 2;"><strong>Web Development:</strong> HTML, CSS, React.js, React Native Framework</li>
+                <li style="--i: 3;"><strong>Mobile Development:</strong> React Native</li>
+                <li style="--i: 4;"><strong>Data Analysis:</strong> Pandas, NumPy, Matplotlib</li>
+                <li style="--i: 5;"><strong>Tools & Technologies:</strong> Git, VS Code, Jupyter Notebook</li>
+                <li style="--i: 6;"><strong>Soft Skills:</strong> Leadership, Communication, Team Collaboration</li>
+            </ul>
+        </section>
+        
+    </div>
+
+    <div id="project" class="section" data-aos="fade-left">
+        <p class="heading">Projects</p>
+        <div class="project-container">
+            <a href="./muj_olx/mujolx.html"  class="project-div">
+            <div data-aos="zoom-in" style="align-items: center;" >
+                <p class="project-title">OLX Clone Application Prototype</p>
+                <img class="project-banner" src="./images/olx.png" alt="OLX Clone">
+                <p class="project-desc">A clone of an OLX Application designed for MUJ.</p>
+            </div>
+            </a>
+            <a href="./connect/connect.html" class="project-div">
+            <div data-aos="zoom-in">
+                <p class="project-title">Connect Application</p>
+                <img class="project-banner" src="./images/connect.png" alt="Autonomous Club">
+                <p class="project-desc">An application inviting enthusiasts to participate in competitions all over the India.</p>
+            </div>
+            </a>
+            <a href="./lung_cancer/lungcancer.html" class="project-div">
+            <div data-aos="zoom-in">
+                <p class="project-title">Early detection of lung cancer with enhanced accuracy</p>
+                <img class="project-banner" src="./images/lung.png" alt="Connect Website">
+                <p class="project-desc">A website showcasing events across India.</p>
+            </div>
+            </a>
+        </div>
+    </div>
+
+    <div id="ac" class="section" data-aos="fade-right">
+      <p class="heading">Achievements & Certificates</p>
+      <div class="achievement-container">
+        <div class="certificate-div" data-aos="zoom-in">
+            <a href="./images/nptel.png" style="display: flex;flex-direction: row;" target="_blank">
+                <img class="certificate-img" src="./images/nptel.png" alt="Pre-Incubation Letter">
+            <div style="margin-left: 5%;">
+                <p class="certificate-title">NPTEL Certificate</p>
+                <p class="certificate-desc">Programming in Java - Elite Certificate (66%)</p>
+            </div>
+          </a>
+        </div>
+          <div class="certificate-div" data-aos="zoom-in">
+              <a href="./images/dean's-list.jpg" style="display: flex;flex-direction: row;" target="_blank">
+                <img class="certificate-img" src="./images/dean's-list.jpg" alt="Dean's List Award">             
+              <div style="margin-left: 5%;">
+                  <p class="certificate-title">Dean's List Award</p>
+                  <p class="certificate-desc">1st Semester -     <b>9.39</b></p>
+                  <p class="certificate-desc">2nd Semester -     <b>9.33</b></p>
+                  <p class="certificate-desc">3rd Semester -     <b>9.72</b></p>
+                  <p class="certificate-desc"><b>CGPA -  9.51</b></p>
+              </div>
+            </a>
+          </div>
+          <div class="certificate-div" data-aos="zoom-in">
+              <a href="./images/pre-incubate.jpg" style="display: flex;flex-direction: row;" target="_blank">
+                  <img class="certificate-img" src="./images/pre-incubate.jpg" alt="Pre-Incubation Letter">
+              <div style="margin-left: 5%;">
+                  <p class="certificate-title">Pre-Incubation Letter from AIC-MUJ</p>
+                  <p class="certificate-desc">Received for an idea to develop an application with ReactNative framework, 
+                    inviting enthusiasts to participate in competitions all over the India.</p>
+              </div>
+            </a>
+          </div>
+      </div>
+  </div>
+
+  <div id="resume" class="section" data-aos="fade-up">
+    <p class="heading">Resume</p>
+    <div class="resume-container">
+        <p class="resume-desc">View my resume to explore my educational background, skills, and experience.</p>
+        <a href="images/resume-2025.pdf" download target="_blank" class="resume-btn">See My Resume</a>
+    </div>
+</div>
+
+<section id="contact" style="justify-self: center;" >
+    <p class="write">Feel free to reach out to me via the details below.</p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <i class="fas fa-phone"></i>
+        <a href="tel:+918160562120" class="hover-link">+91 81605 62120</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-envelope"></i>
+        <a href="mailto:kritikamagnani2004@gmail.com" class="hover-link">kritikamagnani2004@gmail.com</a>
+      </div>
+      <div class="contact-item">
+        <i class="fas fa-map-marker-alt"></i>
+        <p class="hover-link">Bharuch, Gujarat, India</p>
+      </div>
+    </div>
+  </section>
+
+    <footer class="footer" data-aos="fade-up">
+        <p>© 2025 Kritika Magnani</p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+/* Body Styling */
+body {
+    background-color: #000b12; /* Dark background */
+    font-family: Arial, Helvetica, sans-serif; /* Clean font */
+    color: #ffffff; /* White text for readability */
+    line-height: 1.6;
+    align-items: center;
+}
+
+/* Title Styling */
+p:first-of-type {
+    color: dodgerblue;
+    margin: 2% 1%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* Description */
+.description {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin: 2% 1%;
+    font-style: italic;
+}
+
+/* Subheading */
+.screens {
+    color: dodgerblue;
+    font-size: 1.5rem;
+    margin: 2% 1%;
+    font-weight: bold;
+}
+
+/* Image Section */
+.proto-images {
+    border: 2px solid dodgerblue;
+    border-radius: 10px;
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.proto-images:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px dodgerblue;
+}
+
+/* Screens Container */
+div[style*="flex-direction: row"] {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    margin: 2% auto;
+    max-width: 90%;
+}
+
+/* Screen Titles */
+.screens {
+    margin-left: 25%;
+    text-align: center;
+    color: dodgerblue;
+    margin: 5px 0;
+}
+
+/* Video Styling */
+video {
+    border: 3px solid dodgerblue;
+    border-radius: 15px;
+    margin: 2% auto;
+    display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media only screen and (max-width: 768px) {
+    .proto-images {
+        width: 120px;
+    }
+
+    .description {
+        font-size: 1rem;
+        margin: 1% 2%;
+    }
+
+    .screens {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    video {
+        width: 100%;
+        height: auto;
+    }
+
+    div[style*="flex-direction: row"] {
+        flex-direction: column; /* Stack images vertically */
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    p:first-of-type {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .description {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .screens {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .proto-images {
+        width: 100px;
+    }
+}

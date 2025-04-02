@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    background-color: #000b12;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Connect Container */
+.connect-container {
+    max-width: 1200px;
+    margin: 3% auto;
+    padding: 0 2%;
+    text-align: center;
+}
+
+/* Title Styling */
+.connect-title {
+    color: dodgerblue;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid dodgerblue;
+    display: inline-block;
+    padding-bottom: 5px;
+    font-size: xx-large;
+}
+
+/* Description Styling */
+.connect-description {
+    color: #d3d3d3;
+    font-size: 1.2rem;
+    margin: 20px auto;
+    font-style: italic;
+    line-height: 1.8;
+    max-width: 80%;
+}
+
+/* Video Section */
+.video-section {
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 30px auto;
+    width: 90%;
+    max-width: 800px; /* Decreased width */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    align-items: center;
+}
+
+/* Video Styling */
+.connect-video {
+    width: 100%; /* Automatically scales with section width */
+    max-width: 700px; /* Sets a limit on the video size */
+    height: auto; /* Adjusts the height proportionally */
+    display: block;
+    border-radius: 15px;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 768px) {
+    .connect-title {
+        font-size: 2rem;
+    }
+
+    .connect-description {
+        font-size: 1rem;
+        padding: 0 5%;
+    }
+
+    .video-section {
+        max-width: 90%; /* Shrinks container further for smaller screens */
+    }
+
+    .connect-video {
+        max-width: 600px; /* Scales video size for tablets */
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .connect-title {
+        font-size: 1.8rem;
+    }
+
+    .connect-description {
+        font-size: 0.9rem;
+    }
+
+    .video-section {
+        max-width: 100%;
+    }
+
+    .connect-video {
+        max-width: 100%; /* Fully responsive on mobile screens */
+    }
+}
