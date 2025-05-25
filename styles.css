@@ -1,4 +1,8 @@
 /* General Body */
+html {
+  scroll-behavior: smooth;
+}
+
 .body {
     background-color: #000b12;
     color: #ffffff;
@@ -7,7 +11,6 @@
     padding: 0;
     animation: openAnimation 0.5s;
     overflow-x: hidden; /* Prevent horizontal scrolling globally */
-    justify-content: center;
 }
 
 /* Header Section */
@@ -22,7 +25,7 @@
     align-items: center;
     position: fixed;
     width: 100%; /* Ensure header spans the full width of the viewport */
-    /* Prevent exceeding the viewport width */
+    max-width: 100%; /* Prevent exceeding the viewport width */
     top: 0;
     background-color: #000b12;
     z-index: 1000;
@@ -130,11 +133,11 @@
 }
 
 .light-mode .header {
-    background-color: #000b12;
+    background-color: lightblue;
 }
 
 .light-mode .header-details {
-    color: #ffffff;
+    color: #000b12;
 }
 
 .light-mode .header-details:hover {
@@ -155,6 +158,10 @@
 
 .light-mode .toggle-btn {
     background-color: #000b12;
+}
+
+.light-mode .section {
+    background-color:rgba(0, 0, 0, 0.5);
 }
 
 .light-mode .skills-section {
@@ -441,6 +448,37 @@
     background-color: royalblue;
     transform: scale(1.1);
 }
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.primary-btn {
+  background-color: #4a90e2;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.primary-btn:hover {
+  background-color: #357ab7;
+}
+
 .contact-section {
     text-align: center;
     color: deepskyblue;
@@ -596,7 +634,7 @@
     .bio-intro {
         font-size: 22px;
         text-align: center;
-        margin: 70% 0 5% 0;
+        margin: 45% 0 5% 0;
     }
 
     .bio-desc {
@@ -621,10 +659,10 @@
 
     .toggle-btn {
         display: block;
-        margin-top: 15px;
+        margin: 15px auto;
         padding: 10px 15px;
         font-size: 14px;
-        margin-left: 2%;
+        margin-left: 29%;
     }
 
     .skills-section {
@@ -671,12 +709,8 @@
 }
 
 @media only screen and (max-width: 480px) {
-    .header {
-        height: 10%;
-    }
-
     .header-img {
-        width: 50%;
+        width: 70%;
     }
 
     .header-details {
@@ -685,7 +719,7 @@
 
     .bio-intro {
         font-size: 20px;
-        margin: 50% 5% 5% 0%;
+        margin: 70% 5% 5% 0%;
     }
 
     .bio-desc {
@@ -723,5 +757,3 @@
         width: 90%;
     }
 }
-
-/* General Mobile Styles */
